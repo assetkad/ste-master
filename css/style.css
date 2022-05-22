@@ -1,0 +1,238 @@
+*,
+::after,
+::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #faf7f7;
+}
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main {
+    width: 870px;
+}
+
+.sidebar {
+    width: 270px;
+}
+
+.cards-holder{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.cards-holder > .card__link {
+	margin-bottom: 30px;
+}
+
+/* Card */
+
+a.card__link{
+	display: inline-block;
+	text-decoration: none;
+	transition: all 0.2s ease-in;
+}
+
+a.card__link:hover{
+	opacity: 0.9;
+	transform: translateY(-5px);
+}
+
+.card {
+	position: relative;
+	width: 270px;
+    background-color: #fff;
+}
+
+.card__badges{
+	position: absolute;
+	display: flex;
+	top: 10px;
+	left: 15px;
+	right: 15px;
+}
+
+.card__badges > * + * {
+	margin-left: 10px;
+}
+.card__badge{
+	display: inline-block;
+	height: 22px;
+	padding: 0 10px;
+	background-color: #777;
+	border-radius: 4px;
+	font-size: 14px;
+	line-height: 23px;
+	color: #000;
+}
+
+.card__badge--class {
+	background-color: #ffcf26;
+}
+.card__badge--credit {
+	background-color: #11be75;
+	color: #fff;
+}
+
+.card__img {
+	display: block;
+}
+
+.card__content {
+    padding: 15px 15px 20px;
+}
+
+.card__title {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 1.16;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.card__term {
+    font-size: 14px;
+    line-height: 1.14;
+    color: #000;
+	margin-bottom: 10px;
+}
+
+.card__metro {
+    font-size: 14px;
+    line-height: 1.14;
+    color: #000;
+	margin-bottom: 10px;
+}
+
+.card__metro::before{
+	content: "";
+	margin-right: 10px;
+	display: inline-block;
+	vertical-align: baseline;
+	width: 16px;
+	height: 11px;
+	background: url('../img/icons/metro.svg') center center/cover no-repeat;
+}
+
+.card__address {
+	font-size: 14px;
+    line-height: 1.14;
+    color: #777;
+}
+
+/* Button show more */
+
+.btn-more{
+	width: 100%;
+	height: 80px;
+	background-color: #e5e5e5;
+	border-radius: 4px;
+	text-align: center;
+	border: none;
+	font-size: 18px;
+	line-height: 21px;
+	color: #4290c9;
+	cursor: pointer;
+	transition: background-color 0.2s ease-in;
+}
+
+.btn-more:hover{
+	background-color: #ccc;
+}
+
+.btn-more img {
+	margin-right: 10px;
+	vertical-align: bottom;
+}
+
+/* Sidebar */
+
+.widget {
+}
+.widget__title {
+	position: relative;
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 1.16;
+	color: #000;
+	margin-bottom: 20px;
+}
+.widget__title::after{
+	content: '';
+	width: 20px;
+	height: 20px;
+	background-color: red;
+	position: absolute;
+	right: 0;
+	top: 0;
+	background: url(./../img/icons/chevron-up.svg) center center/cover no-repeat;
+}
+.widget__body {
+}
+
+/* Location buttons group */
+
+.location {
+}
+
+.location__row {
+	display: flex;
+}
+
+.location__row:first-child{
+	overflow: hidden;
+	border-radius: 4px 4px 0 0;
+	border: 1px solid #d6d6d6
+}
+
+.location__row:last-child{
+	overflow: hidden;
+	border-radius: 0 0 4px 4px;
+	border: 1px solid #d6d6d6;
+	border-top: none;
+}
+
+.location__btn {
+	flex-grow: 1;
+	font-family: inherit;
+	height: 50px;
+	padding: 0 15px;
+	background-color: transparent;
+	border: none;
+	text-align: center;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 16px;
+	color: #3C3C3C;
+	cursor: pointer;
+	transition: background-color 0.2s ease-in;
+}
+
+.location__btn:hover{
+	background-color: #efdfa38c;
+}
+
+.location__btn--active{
+	background-color: #ffcf26;
+}
+
+.location__btn--active:hover{
+	background-color: #cca000;
+}
